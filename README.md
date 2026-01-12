@@ -54,3 +54,18 @@ exec = "idea"
 icon = "intellij.svg"
 category = ["Development", "Utility"]
 ```
+### Version
+This section specifies how to acquire the sources for building the package. Multiple `[[version]]` tables can be defined, 
+with each entry being a new version. It will support Tarballs and Git.
+#### Tarball
+```toml
+[[version]]
+tag = "1.4.20"
+tarball = { "url" = "https://ftp.gnu.org/gnu/m4/m4-1.4.20.tar.gz", "checksum" = "6ac4fc31ce440debe63987c2ebbf9d7b6634e67a7c3279257dc7361de8bdb3ef" }
+```
+#### Git
+```toml
+[[version]]
+tag = "3.4.0"
+git = { "url" = "https://github.com/libsdl-org/SDL", "tag" = "3.4.0", "branch" = "main", "commit" = "a962f40bbba175e9716557a25d5d7965f134a3d3" }
+```
