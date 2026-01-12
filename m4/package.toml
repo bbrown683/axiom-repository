@@ -1,0 +1,26 @@
+[package]
+name = "m4"
+license = ["GPL-3.0-or-later"]
+homepage = "https://www.gnu.org/software/m4"
+description = "GNU M4 is an implementation of the traditional Unix macro processor."
+categories = ["system"]
+groups = []
+
+[build]
+generator = "autotools"
+system = "make"
+
+[build.dependencies]
+build = ["bash"]
+required = ["glibc"]
+optional = []
+
+[output]
+binaries = ["m4"]
+libraries = []
+share = ["doc/m4.txt"]
+manuals = ["m4.1.gz"]
+
+[[version]]
+tag = "1.4.20"
+source = { "url" = "https://ftp.gnu.org/gnu/m4/m4-1.4.20.tar.gz", "type" = "tarball", "checksum" = "6ac4fc31ce440debe63987c2ebbf9d7b6634e67a7c3279257dc7361de8bdb3ef"}
